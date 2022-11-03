@@ -1,0 +1,20 @@
+@media(min-width:800px) {
+  .blogPostContainer {
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr;
+    grid-template-rows: 250px 1fr 50px;
+    grid-template-areas:
+      "hd hd hd"
+      "main main sd"
+      "ft ft ft";
+  }
+
+  .sd {
+    border: 2px solid rgb(12, 12, 12);
+  }
+
+
+  .imgFlex {
+    direction: column;
+  }
+}

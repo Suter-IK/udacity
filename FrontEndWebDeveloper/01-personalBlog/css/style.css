@@ -1,0 +1,72 @@
+@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
+/*TODO: Create other imports */
+
+.container {
+  display: grid;
+  grid-template-rows: 250px 1fr 50px;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "hd"
+    "main"
+    "ft";
+  border: 2px solid yellow;
+}
+
+.nested {
+  display: grid;
+  grid-auto-rows: (1fr, auto);
+  grid-template-columns: 1fr;
+  padding: 10px;
+}
+
+.card {
+  background: rgb(243, 235, 223);
+  border: 1px solid rgb(58, 71, 66);
+  padding: 10px;
+  margin: 20px solid rgb(58, 71, 66);
+}
+
+.card:hover {
+  box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.box {
+  border: 1px solid red;
+  background: #d1d1d1;
+  padding: 15px;
+}
+
+.header {
+  grid-area: hd;
+  text-align: center;
+}
+
+.header>img {
+  border-radius: 5%;
+  height: 150px;
+  width: 50%;
+  min-width: 30%
+  
+}
+
+.footer {
+  grid-area: ft;
+  text-align: right;
+}
+
+.content {
+  grid-area: main;
+  text-align: center;
+  gap: 20px;
+}
+
+/* If Screen Is Wide Enough */
+@media(min-width:800px) {
+  .nested {
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: (2fr, auto);
+    /*TODO: define gap between, this doesn't work */
+    align-content: space-around;
+    justify-content: space-between;
+  }
+}

@@ -1,5 +1,6 @@
-@import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css");
-@import url("style.css");
+/* @import url("https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"); */
+@import url("style-Project1.css");
+@import url("style-Font.css");
 @import url("blogpostMediaQueries.css");
 
 
@@ -33,6 +34,14 @@
   justify-content: center;
 }
 
+.cardholder>a:hover, 
+.cardholder>a:visited, 
+.cardholder>a:link, 
+.cardholder>a:active
+{
+    text-decoration: none;
+}
+
 .active:hover {
   box-shadow: 0 0 2px 5px rgba(0, 140, 186, 0.5);
   background: rgb(221, 196, 159);
@@ -44,11 +53,16 @@
   cursor: default;
 }
 
+
 .card>h6 {
   color: rgb(226, 230, 22);
   text-decoration: solid, underline;
   background-color: brown;
+  display: inline;
+}
 
+a>.card {
+  color: black;
 }
 
 .boldText {
@@ -73,4 +87,34 @@
 .imgBox {
   width: 50px;
   height: auto;
+}
+
+.shinyButton {
+  top:50%;
+  background-color:#0a0a23;
+  color: #fff;
+  border:none;
+  border-radius:10px;
+  box-shadow: 0px 0px 2px 2px rgb(0,0,0);
+}
+
+.shinyButton:hover {
+    background-color:#002ead;
+    transition: 0.7s;
+}
+
+.biggerButton {
+    top:50%;
+    background-color:#0a0a23;
+    color: #fff;
+    border:none; 
+    border-radius:10px; 
+    padding:15px;
+    min-height:30px; 
+    min-width: 120px;
+}
+
+.biggerButton:hover {
+  background-color:#002ead;
+  transition: 0.7s;
 }

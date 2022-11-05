@@ -1,7 +1,5 @@
-
-
 body {
-  min-width: 500px;
+  min-width: 400px;
 }
 
 #udacityLogo {
@@ -56,6 +54,38 @@ body {
   width: auto;
 }
 
+.card-status-pix {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  float: left;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.card-voted-pix {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 30px;
+  width: 30px;
+  float: right;
+  background-image: url("../img/thumb-up.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+}
+
+.active>.card-status-pix {
+  background-image: url("../img/available.png");
+}
+
+.inactive>.card-status-pix {
+  background-image: url("../img/missing.jpg");
+}
+
 .box {
   background: #d1d1d1;
   padding: 15px;
@@ -65,7 +95,7 @@ body {
   grid-area: hd;
   text-align: center;
   text-decoration: underline;
-  background-color:rgba(113, 135, 143, 0.397);
+  background-color: rgba(113, 135, 143, 0.397);
 }
 
 .header>img {

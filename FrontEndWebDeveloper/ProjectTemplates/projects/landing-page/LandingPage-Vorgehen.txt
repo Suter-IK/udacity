@@ -1,0 +1,44 @@
+0. Development strategy verinnerlichen.
+
+1. 
+Zwei Navigationselemente bauen für mobile und für Desktop (responsive)
+z.Bsp
+<ul class="main-menu" style="display: block;">
+<div class="menu-content">
+      <li ... ><a href='#heading1'>Heading 1</></li>
+      <li ... ></li>
+      <li ... ></li>
+</ul>
+
+2. Scrollen soll smooth geschehen vielleicht mit css ease in/out?
+   Use addEventListener('click',....) to listen to the click event.
+   Use preventDefault() to stop default event.
+   All js methods scrolling, scroll(), scrollBy(), and scrollIntoView() are acceptable.
+   A smooth scrolling behavior is expected in the project.
+   s.auch EventDelegation
+
+3. Die einzelnen Abschnitte sollen auch an den Anfang scrollen können.
+
+4. Öffnen und schliessen der Abschnitte mit + / -
+
+5. Abschnitt soll ebenfalls responsiv sein oder bleiben.
+
+6. Aktive Abschnitte und Navigationselemente sollen anders gefärbt sein.
+  => Set CSS class active state when the element is in the viewport.  also im sichtbaren Bereich.
+  Detect the element location relative to the viewport using .getBoundingClientRect() built-in function.
+
+7. Navigationsmenu soll oben fixiert sein.
+
+8.
+Dynamisches Zufügen der Navigationselemente anhand der Anzahl Abschnitte mit zB. class='landing-header'
+Eine short-description definieren für den Abschnitt, welcher im Link erscheinen kann.
+  mind. 4 Abschnitte sollen vorhanden und anspringbar sein.
+  
+
+
+zuletzt:
+Readme files schreiben: 	 
+https://github.com/navendu-pottekkat/awesome-readme/blob/master/README-template.md
+
+Kommentare vor den wichtigen Sektionen einfügen, 
+  siehe auch http://udacity.github.io/frontend-nanodegree-styleguide/javascript.html#comments

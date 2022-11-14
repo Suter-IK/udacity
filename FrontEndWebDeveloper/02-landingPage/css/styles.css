@@ -9,10 +9,14 @@
 */
 
 
+/* * {
+    border: 1px solid red !important;   
+} */
+
 /* ---- Base Rules ---- */
 body {
-    background: rgb(136,203,171);
-    background: linear-gradient(0deg, rgba(136,203,171,1) 0%, rgba(0,13,60,1) 100%);
+    background: rgb(136, 203, 171);
+    background: linear-gradient(0deg, rgba(136, 203, 171, 1) 0%, rgba(0, 13, 60, 1) 100%);
     margin: 0;
     font-family: 'Merriweather', serif;
     color: #fff;
@@ -26,7 +30,7 @@ h1 {
     margin: 2em 1rem;
 }
 
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em) {
     h1 {
         font-size: 7em;
         margin: 2em 4rem 1em;
@@ -63,18 +67,60 @@ section {
 
 /* ---- Module Rules ---- */
 
-/* Navigation Styles*/
+/* Navigation Styles built as responsive flex*/
 .navbar__menu ul {
-    padding-left: 0;
-    margin: 0;
-    text-align: right;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    align-content: center;
+    padding-inline: 2%;
+    font-family: Oxygen, Sans-Serif;
+    font-size: 1.2em;
+    letter-spacing: -2px;
+    word-spacing: -1px;
+    margin: 1px;
+}
+
+@media only screen and (min-width: 35em) {
+    .navbar__menu ul {
+        font-size: 2em;
+    }
 }
 
 .navbar__menu li {
     display: inline-block;
+    color: #333;
+    min-width: 10vw;
+    max-width: 25vw;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 2px solid rgba(39, 68, 197, 0.527);
+    border-radius: 10%;
+    padding-inline: 1%;
 }
 
 .navbar__menu .menu__link {
+    display: inline-block;
+    color: #333;
+    min-width: 10vw;
+    max-width: 25vw;
+    white-space: nowrap;
+    text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border: 2px solid rgba(39, 68, 197, 0.527);
+    border-radius: 10%;
+    padding: 1%;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+}
+
+.navbar__menu ._menu__link {
     display: block;
     padding: 1em;
     font-weight: bold;
@@ -83,10 +129,18 @@ section {
 }
 
 .navbar__menu .menu__link:hover {
+    box-shadow: 0 0 2px 1px rgb(224, 221, 20);
+    border: 2px solid rgb(224, 221, 20);
     background: #333;
     color: #fff;
-    transition: ease 0.3s all;
+    transition: ease 0.5s all;
 }
+
+/* #navbar__list {
+    display: flexbox;
+    align-items: flex-end;
+    color: rgba(116, 190, 19, 0.1);
+} */
 
 /* Header Styles */
 .page__header {
@@ -104,7 +158,7 @@ section {
     color: #fff;
 }
 
-.page__footer p{
+.page__footer p {
     color: #fff;
 }
 
@@ -116,7 +170,7 @@ section {
     text-align: left;
 }
 
-@media only screen and (min-width: 35em){
+@media only screen and (min-width: 35em) {
     .landing__container {
         max-width: 50em;
         padding: 4em;
@@ -126,7 +180,7 @@ section {
 section:nth-of-type(even) .landing__container {
     margin-right: 0;
     margin-left: auto;
-    text-align: right; 
+    text-align: right;
 }
 
 /* Background Circles */
@@ -146,8 +200,8 @@ section:nth-of-type(odd) .landing__container::before {
 
 section:nth-of-type(even) .landing__container::before {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     top: 3em;
     right: 3em;
@@ -161,8 +215,8 @@ section:nth-of-type(even) .landing__container::before {
 
 section:nth-of-type(3n) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     right: 0;
     bottom: 0;
@@ -176,8 +230,8 @@ section:nth-of-type(3n) .landing__container::after {
 
 section:nth-of-type(3n + 1) .landing__container::after {
     content: '';
-    background: rgb(255,255,255);
-    background: linear-gradient(0deg, rgba(255,255,255,.1) 0%, rgba(255,255,255,.2) 100%);
+    background: rgb(255, 255, 255);
+    background: linear-gradient(0deg, rgba(255, 255, 255, .1) 0%, rgba(255, 255, 255, .2) 100%);
     position: absolute;
     right: 20vw;
     bottom: -5em;
@@ -194,7 +248,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Section Active Styles */
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
-    background: rgb(0, 0, 0);
+    background: rgb(215, 34, 34);
     background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
@@ -210,14 +264,11 @@ section.your-active-class .landing__container::after {
 
 /* Section Active Styles Keyframe Animations */
 @keyframes rotate {
-	from {
-		transform: rotate(0deg)
-		           translate(-1em)
-		           rotate(0deg);
-	}
-	to {
-		transform: rotate(360deg)
-		           translate(-1em) 
-		           rotate(-360deg);
-	}
+    from {
+        transform: rotate(0deg) translate(-1em) rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg) translate(-1em) rotate(-360deg);
+    }
 }

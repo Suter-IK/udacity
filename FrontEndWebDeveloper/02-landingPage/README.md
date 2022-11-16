@@ -6,7 +6,9 @@ Given some static html and css, I had to convert it to a interactive navigation 
 various DOM elements and some css styling.
 
 ## Demo
-[Direct link to application](https://suter-ik.github.io/udacity/FrontEndWebDeveloper/02-landingPage/landingPage.html)
+[demo](https://suter-ik.github.io/udacity/FrontEndWebDeveloper/02-landingPage/img/DemoScreenshot.png|width=100px)
+
+[a link](https://suter-ik.github.io/udacity/FrontEndWebDeveloper/02-landingPage/landingPage.html)
 
 ## Table of Contents
 

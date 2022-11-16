@@ -42,11 +42,11 @@ function getNavVector(targetNodes, childAttribute) {
 }
 
 /**
- * Creates navigation elements from navVector-Array
- * @param { Array.<{text: String, target: String}> } navVector 
+ * Creates navigation elements from navNodes-Array
+ * @param { Array.<{text: String, target: String}> } navNodes 
  * @returns { DocumentFragment }
  */
-function getListElements(navVector) {
+function getListElements(navNodes) {
   const frag = document.createDocumentFragment();
   for (let i = 0; i < navNodes.length; i++) {
     const liElement = document.createElement('li');
@@ -158,7 +158,6 @@ initializeSolution();
 
 /**
  * End Main Functions
- * Begin Events
  *
 */
 

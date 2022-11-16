@@ -67,7 +67,7 @@ section {
 
 /* ---- Module Rules ---- */
 
-/* Navigation Styles built as responsive flex*/
+/* Enhanced navigation styles built as responsive flex*/
 .navbar__menu ul {
     display: flex;
     flex-direction: row;
@@ -91,16 +91,6 @@ section {
 
 .navbar__menu li {
     display: inline-block;
-    color: #333;
-    min-width: 10vw;
-    max-width: 25vw;
-    white-space: nowrap;
-    text-align: center;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    border: 2px solid rgba(39, 68, 197, 0.527);
-    border-radius: 10%;
-    padding-inline: 1%;
 }
 
 .navbar__menu .menu__link {
@@ -120,21 +110,21 @@ section {
     color: #000;
 }
 
-.navbar__menu ._menu__link {
-    display: block;
-    padding: 1em;
-    font-weight: bold;
-    text-decoration: none;
-    color: #000;
+.navbar__menu .nav-active {
+    background: rgb(200, 200, 255);
 }
 
 .navbar__menu .menu__link:hover {
+    cursor: pointer;
     box-shadow: 0 0 2px 1px rgb(224, 221, 20);
     border: 2px solid rgb(224, 221, 20);
     background: #333;
     color: #fff;
     transition: ease 0.5s all;
 }
+
+
+
 
 /* #navbar__list {
     display: flexbox;
@@ -249,7 +239,7 @@ section:nth-of-type(3n + 1) .landing__container::after {
 /* Note: your-active-class class is applied through javascript. You should update the class here and in the index.html to what you set in your javascript file.  */
 section.your-active-class {
     background: rgb(215, 34, 34);
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
+    background: linear-gradient(0deg, rgba(180, 67, 67, 0.1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 section.your-active-class .landing__container::before {

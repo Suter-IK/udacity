@@ -75,6 +75,7 @@ const navClickHandler = (e) => {
 /**
  * Event handler for scroll event, scrolling to anchor ID using scrollTO event
  * and adding class 'active' to section when near top of viewport
+ * and showing TOP button while scrolling.
  * @param {*} e - The observable event.
  */
 const scrollHandler = (e) => {
@@ -97,6 +98,12 @@ const scrollHandler = (e) => {
 
   const navButton = document.querySelector(`[navTarget="${targetSection.id}"]`);
   setActiveListItem(navButton.parentElement, navButton);
+
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    btnScrollToTop.style.display = "block";
+  } else {
+    btnScrollToTop.style.display = "none";
+  }
 }
 
 
@@ -124,6 +131,13 @@ const setActiveSection = (item) => {
   }
   item.classList.add('your-active-class');
 }
+
+const scrollToTop = () => {
+  const targetSection = document.querySelector('main');
+  targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  console.log(targetSection.innerHTML);
+}
+
 
 /**
  * End Helper Functions

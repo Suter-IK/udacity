@@ -123,8 +123,27 @@ section {
     transition: ease 0.5s all;
 }
 
+#btnScrollToTop {
+    display: none;
+    position: fixed;
+    bottom: 20px; /* 20px from bottom */
+    right: 30px; /* 30px from the right */
+    z-index: 99; /* overlap all */
+}
+#myBtn {
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: red; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
 
-
+#btnScrollToTop:hover {
+  background-color: #555; /* Add a dark-grey background on hover */
+}
 
 /* #navbar__list {
     display: flexbox;

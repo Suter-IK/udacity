@@ -1,6 +1,6 @@
 0. Development strategy verinnerlichen.
 
-1. ok
+1.
 Zwei Navigationselemente bauen für mobile und für Desktop (responsive)
 z.Bsp
 <ul class="main-menu" style="display: block;">

@@ -123,33 +123,26 @@ section {
     transition: ease 0.5s all;
 }
 
+/* button to scroll to top of page */
 #btnScrollToTop {
     display: none;
     position: fixed;
-    bottom: 20px; /* 20px from bottom */
-    right: 30px; /* 30px from the right */
-    z-index: 99; /* overlap all */
-}
-#myBtn {
-  border: none; /* Remove borders */
-  outline: none; /* Remove outline */
-  background-color: red; /* Set a background color */
-  color: white; /* Text color */
-  cursor: pointer; /* Add a mouse pointer on hover */
-  padding: 15px; /* Some padding */
-  border-radius: 10px; /* Rounded corners */
-  font-size: 18px; /* Increase font size */
+    bottom: 20px;
+    /* 20px from bottom */
+    right: 30px;
+    /* 30px from the right */
+    z-index: 99;
+    /* overlap all */
+    border: none;
+    outline: none;
+    cursor: pointer;
+    border-radius: 10px;
+    font-size: 2em;
 }
 
 #btnScrollToTop:hover {
-  background-color: #555; /* Add a dark-grey background on hover */
+    background-color: #555;
 }
-
-/* #navbar__list {
-    display: flexbox;
-    align-items: flex-end;
-    color: rgba(116, 190, 19, 0.1);
-} */
 
 /* Header Styles */
 .page__header {

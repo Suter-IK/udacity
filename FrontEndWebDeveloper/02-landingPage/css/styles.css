@@ -114,13 +114,15 @@ section {
     background: rgb(200, 200, 255);
 }
 
-.navbar__menu .menu__link:hover {
-    cursor: pointer;
-    box-shadow: 0 0 2px 1px rgb(224, 221, 20);
-    border: 2px solid rgb(224, 221, 20);
-    background: #333;
-    color: #fff;
-    transition: ease 0.5s all;
+@media (hover: hover) {
+    .navbar__menu .menu__link:hover {
+        cursor: pointer;
+        box-shadow: 0 0 2px 1px rgb(224, 221, 20);
+        border: 2px solid rgb(224, 221, 20);
+        background: #333;
+        color: #fff;
+        transition: ease 0.5s all;
+    }
 }
 
 /* button to scroll to top of page */

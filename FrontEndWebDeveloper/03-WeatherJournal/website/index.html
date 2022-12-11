@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Weather Journal</title>
+  <link href="https://fonts.googleapis.com/css?family=Oswald:400,600,700|Ranga:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/utils.css">
+</head>
+
+<body>
+  <div id="app">
+    <div class="holder headline">
+      Weather Journal App - by Raymond Suter
+    </div>
+    <div class="holder zip">
+      <label for="zip">Enter city name or zip code</label>
+      <input type="text" id="zip" placeholder="Zip code or city name">
+    </div>
+    <div class="holder country">
+      <label for="selectCountry">Select country for zip code</label>
+      <div class="custom-select">
+        <select id="selectCountry" title="Select country">
+          <option value="">Select country</option>
+          <option value="CH" selected="true">Switzerland</option>
+          <option value="DE">Germany</option>
+          <option value="FR">France</option>
+          <option value="IT">Italy</option>
+          <option value="US">USA</option>
+        </select>
+      </div>
+    </div>
+    <div class="holder feel">
+      <label for="feelings">How are you feeling today?</label>
+      <textarea class="myInput" id="feelings" placeholder="Enter your feelings here" rows="2" cols="1"></textarea>
+      <button id="generate" type="submit"> Generate </button>
+    </div>
+    <div class="holder entry">
+      <div class="title">Most Recent Entry</div>
+      <div id="entryHolder">
+        <div id="date"></div>
+        <div id="temp"></div>
+        <div id="content"></div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js" type="module"></script>
+
+
+</body>
+
+</html>

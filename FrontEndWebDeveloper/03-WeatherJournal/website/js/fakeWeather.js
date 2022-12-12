@@ -5,7 +5,7 @@ export { Weather }
  * @param { ('CitiesByName'|'WeatherByCityName'|'WeatherByCoordinates'|'WeatherByZipCode') } url 
  * @returns Promise with dummy results for testing
  */
-const Weather = (url, apiUnits, cityName, zipCode, countryCode) => {
+const Weather = (url, apiUnits, cityName, zipCode, countryCode, lat, long) => {
   return new Promise((ok, fail) => {
     switch (url) {
       case 'CitiesByName':

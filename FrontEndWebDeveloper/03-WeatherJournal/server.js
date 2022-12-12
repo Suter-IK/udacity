@@ -48,7 +48,7 @@ app.get('/', (request, response) => {
 
 
 // Send real weather 
-app.get('/realWeather', sendData);
+app.get('/getWeather', sendData);
 function sendData(request, response) {
   response.send(projectData);
 };
@@ -60,10 +60,12 @@ function sendData(request, response) {
  */
 app.post('/setWeather', setWeather);
 function setWeather(request, response) {
-    projectData['temperature'] = request.body.temperature;
-    projectData['date'] = request.body.date;
-    projectData['content'] = request.body.content;
-    console.log('T:' + projectData.temperature + 'D:' + projectData.date + 'C:' + projectData.content);
-    response.send(projectData);
+  projectData['tempF'] = request.body.temperature;
+  projectData['temperature'] = ((request.body.temperature - 32) * 5 / 9).toFixed(1);
+  projectData['date'] = request.body.date;
+  projectData['content'] = request.body.content;
+  projectData['cityName'] = request.body.cityName;
+  console.log(`cityName:${projectData.cityName}/tempF:${projectData.tempF}/temperature:${projectData.temperature}/date:${projectData.date}/content:${projectData.content}`);
+  response.send(projectData);
 };
 

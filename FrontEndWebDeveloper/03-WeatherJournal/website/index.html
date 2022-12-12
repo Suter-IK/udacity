@@ -16,15 +16,15 @@
       Weather Journal App - by Raymond Suter
     </div>
     <div class="holder zip">
-      <label for="zip">Enter city name or zip code</label>
-      <input type="text" id="zip" placeholder="Zip code or city name">
+      <label for="zip">City name, zip or empty</label>
+      <input type="text" id="zip" placeholder="Please enter zip code or city name">
     </div>
     <div class="holder country">
-      <label for="selectCountry">Select country for zip code</label>
+      <label for="selectCountry">Country for zip code</label>
       <div class="custom-select">
-        <select id="selectCountry" title="Select country">
+        <select id="selectCountry" title="Please select country for zip code">
           <option value="">Select country</option>
-          <option value="CH" selected="true">Switzerland</option>
+          <option value="CH">Switzerland</option>
           <option value="DE">Germany</option>
           <option value="FR">France</option>
           <option value="IT">Italy</option>
@@ -41,6 +41,7 @@
       <div class="title">Most Recent Entry</div>
       <div id="entryHolder">
         <div id="date"></div>
+        <div id="location"></div>
         <div id="temp"></div>
         <div id="content"></div>
       </div>

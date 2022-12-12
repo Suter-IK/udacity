@@ -18,26 +18,26 @@ const apiKey = '523d6ca10d95299119e01ec8cf412787';
  * @param { ('imperial'|'metric') } apiUnits
  * @returns Promise from API
  */
-const Weather = (url, apiUnits, cityName, zipCode, countryCode) => {
+const Weather = (url, apiUnits, cityName, zipCode, countryCode, latitude, longitude) => {
     return new Promise((ok, fail) => {
+        let url2Fetch = '';
         switch (url) {
             case 'CitiesByName':
-                ok(getWeather(`http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`));
+                url2Fetch = `http://api.openweathermap.org/geo/1.0/direct?q=${cityName}&limit=5&appid=${apiKey}`;
                 break;
             case 'WeatherByCityName':
-                ok(getWeather(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${apiUnits}`));
+                url2Fetch = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=${apiUnits}`;
                 break;
             case 'WeatherByCoordinates':
-                ok(getWeather(`https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`));
+                url2Fetch = `https://api.openweathermap.org/data/2.5/weather?lat=${latitude}&lon=${longitude}&appid=${apiKey}&units=${apiUnits}`;
                 break;
             case 'WeatherByZipCode':
-                ok(getWeather(`https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},${countryCode}&appid=${apiKey}&units=${apiUnits}`));
+                url2Fetch = `https://api.openweathermap.org/data/2.5/weather?zip=${zipCode},${countryCode}&appid=${apiKey}&units=${apiUnits}`;
                 break;
         }
-        fail(`No data found for: ${url}`);
+        getWeather(url2Fetch).then(response => ok(response)).catch(err => fail(`No data found for: ${url} / ${url2Fetch}`));
     });
-
-};
+}
 
 
 const getWeather = (url) => fetch(url)
@@ -50,4 +50,5 @@ const getWeather = (url) => fetch(url)
     })
     .catch((err) => {
         console.log('Unable to get/fetch -', err);
+        throw Error(err);
     });

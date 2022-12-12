@@ -1,3 +1,5 @@
+export { formatSelect };
+
 //Thanks to https://www.w3schools.com/howto/howto_custom_select.asp
 
 // <!-- Surround the select box within a "custom-select" DIV element.
@@ -9,11 +11,6 @@
 //     <option value="2">BMW</option>
 //   </select>
 // </div>
-
-
-export { formatSelect };
-
-
 
 function formatSelectControl(className) {
     var x, i, j, l, ll, selElmnt, a, b, c;

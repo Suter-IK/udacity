@@ -19,12 +19,23 @@ It uses the OpenWeatherMap API to fetch weather based data for the location of t
 * Initialize page with geolocation information at startup.
 * Fetch data from Weather service and POST specific data to the global container within server.js (localhost).
 * Update the UI dynamically.
-* Catch errors in console and UI.
+* Implement error handling in console and UI.
+* Adapt for mobile devices.
 
 ### Final Output
 * Application with geolocation functionality, fetching the current weather of the user's location.
 * UI for zip or location name input.
 * Current temperature, date and location.
+
+
+## Weather by city name
+![Weather by city name](https://github.com/Suter-IK/udacity/blob/main/FrontEndWebDeveloper/03-WeatherJournal/website/images/SearchByCityName.png?raw=true)
+
+## Weather by zip code
+![Weather by city name](https://github.com/Suter-IK/udacity/blob/main/FrontEndWebDeveloper/03-WeatherJournal/website/images/SearchByZipCode.png?raw=true)
+
+## Weather by geolocation
+![Weather by city name](https://github.com/Suter-IK/udacity/blob/main/FrontEndWebDeveloper/03-WeatherJournal/website/images/SearchByGeoLocation.png?raw=true)
 
 ### Rescources
  * https://www.w3schools.com/howto/howto_custom_select.asp
